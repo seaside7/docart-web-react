@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import { category } from '../modules/home'
+import { actions } from '../modules/home'
 
 /*  This is a container component. Notice it does not contain any JSX,
     nor does it import React. This component is **only** responsible for
@@ -12,12 +12,12 @@ import HomeView from '../components/HomeView'
     Keys will be passed as props to presentational components. Here we are
     implementing our wrapper around increment; the component doesn't care   */
 
-const mapDispatchToProps = {
-  category
-}
+const mapDispatchToProps = actions
 
 const mapStateToProps = (state) => ({
-  
+    categories1: state.home.categories1,
+    categories2: state.home.categories2,
+    categories3: state.home.categories3
 })
 
 /*  Note: mapStateToProps is where you should use `reselect` to create selectors, ie:

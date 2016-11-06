@@ -6,22 +6,21 @@ import ProductsView from './ProductsView';
 
 class HomeView extends React.Component {
   componentWillMount() {
-    console.log("HomeView", this.props);
-    this.props.category();
+      this.props.fetchCategoryAgriculture();
+      this.props.fetchCategoryKebutuhanHarian();
+      this.props.fetchCategoryProdukTerproses();
   }
 
   render() {
     return (
       <div>
         <SlideShowView/>
-        <MenuCategoryView/>
+        <MenuCategoryView categories1={this.props.categories1} categories2={this.props.categories2} categories3={this.props.categories3}/>
         <section class="pad60">
           <div class="container">
             <div class="row">
-              <ProductsView title="Promo Hari Ini"/>
-              <ProductsView title="Produk Makanan &amp; Minuman Terpopuler"/>
-              <ProductsView title="Produk Agrikultur Terpopuler"/>
-              <ProductsView title="Consumer Good Terpopular"/>
+              <ProductsView {...this.props} title="Promo Hari Ini"/>
+              
             </div>
           </div>
         </section>
@@ -30,5 +29,8 @@ class HomeView extends React.Component {
     )
   }
 }
-
+/*
+<ProductsView title="Produk Makanan &amp; Minuman Terpopuler"/>
+              <ProductsView title="Produk Agrikultur Terpopuler"/>
+              <ProductsView title="Consumer Good Terpopular"/>*/
 export default HomeView

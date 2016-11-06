@@ -6,12 +6,12 @@ export const RegisterLinkView = () => (
             <div class="row">
                 <div class="col-md-6">
                     <div class="bannerinfo">
-                        <a href="register.html"><img class="img-responsive" src="img/banner1.jpg"/>></a>
+                        <a href="register.html"><img class="img-responsive" src="img/banner1.jpg"/></a>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="bannerinfo">
-                        <a href="register.html"><img class="img-responsive" src="img/banner2.jpg"/>></a>
+                        <a href="register.html"><img class="img-responsive" src="img/banner2.jpg"/></a>
                     </div>
                 </div>
             </div>
